@@ -1,9 +1,17 @@
 /* Global Variables */
 //api key and base url
-
-const key = process.env.KEY;
+let key;
 const baseURL = "https://api.openweathermap.org/data/2.5/weather?q=";
-
+const getApiKey = async () => {
+  const res = await fetch("http://localhost:8080/apiKey");
+  try {
+    key = await res.text();
+  } catch {
+    (err) => {
+      console.log(err);
+    };
+  }
+};
 //input data
 let city;
 let post;
@@ -60,6 +68,7 @@ const SendNewPost = async (url, data = {}) => {
 
 //get the weither by city
 const getWeither = async (city) => {
+  getApiKey();
   const res = await fetch(baseURL + city + "&units=metric&appid=" + key);
   try {
     const weitherData = await res.json();

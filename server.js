@@ -4,6 +4,7 @@ projectData = [];
 const experss = require("express");
 // Start up an instance of app
 const app = experss();
+require("dotenv").config();
 
 /* Dependencies */
 const bodyParser = require("body-parser");
@@ -36,4 +37,8 @@ app.post("/add", (req, res) => {
   };
   projectData.push(LatestEntry);
   res.end();
+});
+
+app.get("/apiKey", (req, res) => {
+  res.send(process.env.API_KEY);
 });
