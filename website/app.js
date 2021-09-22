@@ -1,6 +1,7 @@
 /* Global Variables */
 //api key and base url
-const key = "6d87839af16592290573656d7a14848a";
+
+const key = process.env.KEY;
 const baseURL = "https://api.openweathermap.org/data/2.5/weather?q=";
 
 //input data
