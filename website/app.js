@@ -65,10 +65,9 @@ const SendNewPost = async (url, data = {}) => {
     (err) => console.log(err);
   }
 };
-
+getApiKey();
 //get the weither by city
 const getWeither = async (city) => {
-  getApiKey();
   const res = await fetch(baseURL + city + "&units=metric&appid=" + key);
   try {
     const weitherData = await res.json();
