@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  background-color: rgba(255, 115, 0, 0.623);
+  background-image: url("./imgs/morning.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  font-size: 1.5em;
+  font-weight: 800;
+  justify-content: center;
+  align-items: center;
+}
+
+#app {
+  margin: 10%;
+  padding: 4%;
+  background-color: rgba(240, 248, 255, 0.288);
+  border-radius: 3%;
+}
+.holder {
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5%;
+}
+.headline {
+  font-size: 1.5em;
+  font-family: "Times New Roman", Times, serif;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  padding: 1em;
+  padding-left: 0;
+  font-size: 1.2em;
+}
+input {
+  max-width: fit-content;
+  align-self: center;
+  border: solid black 2px;
+  border-radius: 2%;
+  font-size: 0.8em;
+}
+textarea {
+  max-width: 70%;
+  align-self: center;
+  border: solid black 2px;
+  border-radius: 2%;
+  font-size: 0.8em;
+}
+button {
+  font-size: 1.5em;
+  margin: 1em 1em 0 0;
+  max-width: fit-content;
+  color: blanchedalmond;
+  background-color: blue;
+  border: 2px solid white;
+  border-radius: 5%;
+  font-weight: 600;
+}
+
+#entryHolder {
+  margin: 0.5em;
+  padding: 1em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+}
+.dataDiv {
+  margin: 1em;
+  border-radius: 1.5%;
+  width: 70%;
+  align-self: center;
+}
